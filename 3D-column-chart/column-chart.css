@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+}
+.big-box {
+  background: linear-gradient(120deg, rgba(50, 150, 100, 0.4), rgba(0, 0, 100, 0));
+  width: 100%;
+  height: 100vh;
+  display: block;
+  perspective: 700px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.big-box input {
+  display: none;
+}
+.big-box input + .box-k {
+  width: 450px;
+  height: 500px;
+  border-radius: 20px;
+  margin: auto;
+  transform-style: preserve-3d;
+  transition: all .5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: 50% 50%;
+}
+.big-box input + .box-k::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transition: all .5s;
+  background: rgba(39, 38, 38, 0.5);
+  border-radius: 20px;
+}
+.big-box input + .box-k::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: black;
+  border-radius: 20px;
+  z-index: -1;
+  transition: all .5s;
+}
+.big-box input + .box-k .box-tp {
+  width: 450px;
+  height: 500px;
+  background: url(image.jpg) no-repeat center center;
+  background-size: cover;
+  border-radius: 20px;
+}
+.big-box input + .box-k h3 {
+  position: absolute;
+  top: 130px;
+  left: 40%;
+  font-size: 30px;
+  font-weight: 330;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .5s;
+}
+.big-box input + .box-k p {
+  position: absolute;
+  top: 170px;
+  left: 40%;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 300;
+  opacity: 1;
+  transition: all .5s;
+}
+.big-box input + .box-k > span {
+  position: absolute;
+  top: 300px;
+  left: 38%;
+  font-size: 40px;
+  transition: all 1s;
+  transform: translateY(0px);
+}
+.big-box input + .box-k .cylindrical {
+  position: absolute;
+  top: 230px;
+  left: 104px;
+  transform-style: preserve-3d;
+}
+.big-box input + .box-k .cylindrical .cylindrical-small {
+  width: 20px;
+  height: 61px;
+  margin: 0px 6px;
+  transform: rotateX(90deg) rotateY(45deg);
+  transform-origin: 50% 50% 0;
+  display: inline-block;
+  transition: all 1s;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.big-box input + .box-k .cylindrical .cylindrical-small::before {
+  content: 'M';
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 10px;
+  left: -22px;
+  transition: all .5s;
+  transform-origin: 50% 100% 0;
+  transform: rotateX(-90deg);
+}
+.big-box input + .box-k .cylindrical .cylindrical-small::after {
+  content: '';
+  width: 20px;
+  height: 0;
+  position: absolute;
+  top: 30px;
+  left: -1px;
+  transition: all .5s;
+  transform-origin: 0 50% 0;
+  transform: rotateY(-90deg);
+  background: linear-gradient(to bottom, #feffff 0%, #85d7f7 0%, #4c8596 100%);
+}
+.big-box input + .box-k .cylindrical .cylindrical-small span {
+  transform-origin: 0 50% 0;
+  width: 0;
+  color: black;
+  transform: rotateZ(90deg);
+  position: absolute;
+  top: 20px;
+  left: -11px;
+  transition: all .5s;
+  background: linear-gradient(to bottom, #feffff 0%, #ddf1f9 0%, #a0d8ef 100%);
+}
+.big-box input + .box-k .cylindrical .one {
+  transition: all .3s;
+}
+.big-box input + .box-k .cylindrical .two {
+  transition: all .4s;
+}
+.big-box input + .box-k .cylindrical .three {
+  transition: all .5s;
+}
+.big-box input + .box-k .cylindrical .four {
+  transition: all .6s;
+}
+.big-box input + .box-k .cylindrical .five {
+  transition: all 1s;
+}
+.big-box input + .box-k .cylindrical .six {
+  transition: all .4s;
+}
+.big-box input + .box-k .cylindrical .seven {
+  transition: all .5s;
+}
+input:checked + .box-k {
+  transform: rotateX(60deg);
+}
+input:checked + .box-k::before {
+  background: rgba(0, 50, 100, 0.8);
+}
+input:checked + .box-k::after {
+  transform: translateZ(-20px);
+}
+input:checked + .box-k h3 {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+input:checked + .box-k p {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+input:checked + .box-k .cylindrical .one::before {
+  top: 70px;
+}
+input:checked + .box-k .cylindrical .one::after {
+  height: 60px;
+}
+input:checked + .box-k .cylindrical .one span {
+  width: 60px;
+}
+input:checked + .box-k .cylindrical .two::before {
+  top: 100px;
+}
+input:checked + .box-k .cylindrical .two::after {
+  height: 90px;
+}
+input:checked + .box-k .cylindrical .two span {
+  width: 90px;
+}
+input:checked + .box-k .cylindrical .three::before {
+  top: 110px;
+}
+input:checked + .box-k .cylindrical .three::after {
+  height: 100px;
+}
+input:checked + .box-k .cylindrical .three span {
+  width: 100px;
+}
+input:checked + .box-k .cylindrical .four::before {
+  top: 130px;
+}
+input:checked + .box-k .cylindrical .four::after {
+  height: 120px;
+}
+input:checked + .box-k .cylindrical .four span {
+  width: 120px;
+}
+input:checked + .box-k .cylindrical .five::before {
+  top: 160px;
+}
+input:checked + .box-k .cylindrical .five::after {
+  height: 150px;
+}
+input:checked + .box-k .cylindrical .five span {
+  width: 150px;
+}
+input:checked + .box-k .cylindrical .six::before {
+  top: 95px;
+}
+input:checked + .box-k .cylindrical .six::after {
+  height: 85px;
+}
+input:checked + .box-k .cylindrical .six span {
+  width: 85px;
+}
+input:checked + .box-k .cylindrical .seven::before {
+  top: 105px;
+}
+input:checked + .box-k .cylindrical .seven::after {
+  height: 95px;
+}
+input:checked + .box-k .cylindrical .seven span {
+  width: 95px;
+}
