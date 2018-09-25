@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="qqqq">
+			<div class="qqq">
+			</div>
+		</div>
+		<hr />
+		<style type="text/css">
+			.qqqq{
+				width: 150px;
+				height: 150px;
+				background:#e1e1e1;
+				margin: 20px auto;
+				perspective:100px;
+			}
+			.qqqq .qqq{
+				width: 150px;
+				height: 150px;
+				background: #03A9F4;
+				transition: all .5s;
+				opacity: .5;
+			}
+			.qqqq:hover .qqq{
+				transform: rotate(45deg);
+				transform-origin:100% 0 0;	
+			}
+		</style>
+
+		<div class="big-box">
+			<a href="">
+				<div class="box">
+					<img src="2.jpg" />
+					<div class="box-wz-k">
+						<div class="box-wz">
+							<h3>Heading here</h3>
+							<p>Description goes here</p>
+						</div>
+					</div>
+				</div>
+				<div class="xz"></div>
+			</a>
+		</div>
+		<hr/>
+		<style type="text/css">
+			.big-box .xz{
+				width: 200px;
+				height: 200px;
+				border: 10px solid #ecab18;
+				border-radius: 50%;
+				border-right: 10px solid #1ad280;
+				border-bottom: 10px solid #1ad280;
+				position: absolute;
+				top: -10px;
+				left: -10px;
+				transform: rotate(0);
+				transition: all 1s;
+				z-index: -1;
+			}
+			.big-box .box:hover +.xz{
+				transform: rotate(180deg);
+			}
+			.big-box {
+				width: 200px;
+				height: 200px;
+				position: relative;
+				margin: 20px auto;
+				
+			}
+			.big-box .box {
+				position: relative;
+			}
+			.big-box .box .box-wz p {
+				color: #bbb;
+				font-size: 12px;
+				font-family: italic;
+				margin: 0 37px;
+				padding-top: 10px;
+			}
+			.big-box .box .box-wz h3 {
+				color: white;
+				font-size: 22px;
+				margin: 0 25px;
+				text-align: center;
+				text-transform: uppercase;
+				border-bottom: 1px solid white;
+				padding-bottom: 10px;
+			}
+			.big-box .box:hover .box-wz-k{
+				background: rgba(0, 0, 0, 0.6);
+			}
+			.big-box .box:hover .box-wz {
+				opacity: 1;
+			}
+			.big-box .box .box-wz-k{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 98%;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, 0);
+				transition: all 1s;
+			}
+			.big-box .box .box-wz {
+				position: absolute;
+				top: 45px;
+				left: 0;
+				text-decoration: none;
+				opacity: 0;
+				transition: all 1s;
+			}
+			.big-box .box img {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+			}
+		</style>
+		
+		<div class="big-rotating">
+			<div class="rotating"></div>
+			<div class="rotating-wz">
+				<h3>Heading here</h3>
+				<p>Description goes here</p>
+			</div>
+		</div>
+		<style type="text/css">
+			.big-rotating {
+				width: 250px;
+				height: 250px;
+				margin: 10px auto;
+				position: relative;
+				cursor: pointer;
+			}
+			
+			.big-rotating .rotating {
+				background: url(4.jpg) no-repeat -10px;
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				border: 10px solid rgba(255, 255, 255, 0.5);
+				transform: rotate(0deg);
+				transition: all .5s;
+			}
+			.big-rotating:hover .rotating-wz{
+				transform: translateX(0px);
+				opacity: 1;
+				visibility: visible;
+			}
+			.big-rotating:hover .rotating {
+				transform: rotate(-90deg);
+				
+			}
+			.big-rotating .rotating-wz {
+				width: 220px;
+				height: 220px;
+				background: rgba(0, 0, 0, 0.6);
+				border-radius: 50%;
+				position:absolute;
+				top: 0;
+				left: 0;
+				transform: translateX(-250px);
+				transition: all .5s;
+				opacity: 0;
+				pointer-events: none;
+			}
+			
+			.big-rotating .rotating-wz h3 {
+				color: white;
+				font-size: 22px;
+				margin: 50px 24px;
+				text-align: center;
+				text-transform: uppercase;
+				border-bottom: 1px solid white;
+				padding-bottom: 10px;
+				
+			}
+			
+			.big-rotating .rotating-wz p {
+				color: #bbb;
+				font-size: 12px;
+				font-family: italic;
+				margin: -40px 47px;
+				padding-top: 10px;
+			}
+		</style>
+		<hr />
+		<div class="bw-big-small">
+		   <div class="big-small">
+		   </div>
+		   <div class="big-small-k">
+				<h3>Heading here</h3>
+				<p>Description goes here</p>
+			</div>
+		</div>
+		<style type="text/css">
+			.bw-big-small{
+				width: 350px;
+				height: 270px;
+				margin: 0 auto;
+				position: relative;
+				cursor: pointer;
+			}
+			.bw-big-small .big-small{
+				background: url(4.jpg) no-repeat -11px;
+				width: 250px;
+				height: 250px;
+				border-radius: 50%;
+
+				border: 10px solid rgba(255,255,255,0.5);
+				transform: scale(1);
+				transition: all .5s;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			.bw-big-small:hover .big-small{
+				transform: scale(0.5);
+				right: -100px;
+			}
+			.bw-big-small .big-small-k h3 {
+				color: white;
+				font-size: 22px;
+				margin: 50px 24px;
+				text-align: center;
+				text-transform: uppercase;
+				border-bottom: 1px solid white;
+				padding-bottom: 10px;
+				padding-top:80px;
+			}
+			.bw-big-small .big-small-k p {
+				color: #bbb;
+				font-size: 12px;
+				font-family: italic;
+				margin: -47px 60px;
+				padding-top: 10px;
+			}
+			.bw-big-small .big-small-k{
+				width: 270px;
+				height: 270px;
+				background: rgba(0, 0, 0, 0.6);
+				border-radius: 50%;
+				transform: translateX(-270px);
+				transition: all .5s;
+				opacity: 0;
+			}
+			.bw-big-small:hover .big-small-k{
+				transform: translateX(60px);
+				opacity: 1;
+			}
+		</style>
+		<hr />
+		<div class="left-right">
+			<div class="left"></div>
+			<div class="right">
+				<h3>Heading here</h3>
+				<p>Description goes here</p>
+			</div>
+		</div>
+		<style type="text/css">
+			.left-right{
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				position: relative;
+				cursor: pointer;
+			}
+			.left-right .left{
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				background: url(4.jpg) no-repeat -11px;
+				border: 10px solid rgba(255,255,255,0.5);
+				transform: translateX(0);
+				transition: all .5s;
+				opacity: 1;
+			}
+			.left-right:hover .left{
+				transform: translateX(200px);
+				opacity: 0;
+			}
+			.left-right:hover .right{
+				transform: translateX(0);
+				opacity: 1;
+			}
+			.left-right .right{
+				width: 170px;
+				height: 170px;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, 0.6);
+				position: absolute;
+				top:0;
+				left: 0;
+				transform: translateX(-170px);
+				transition: all .5s;
+				opacity: 0;
+			}
+			.left-right .right h3 {
+				color: white;
+				font-size: 22px;
+				margin: 34px 24px;
+				text-align: center;
+				text-transform: uppercase;
+				border-bottom: 1px solid white;
+				padding-bottom: 10px;
+			}
+			.left-right .right p {
+				color: #bbb;
+				font-size: 12px;
+				font-family: italic;
+				margin: -27px 22px;
+			}
+		</style>
+		<hr />
+		<div class="big-rotating">
+			<div class="rotating-k">
+				<div class="rotating">
+				<h3>Heading here</h3>
+				<p>Description goes here</p>
+				</div>
+			</div>
+		</div>
+		<style type="text/css">
+			.big-rotating{
+				width: 150px;
+				height: 150px;
+				margin: 0 auto;		
+			}
+			.big-rotating .rotating-k{
+				width: 150px;
+				height: 150px;
+				background: url(1.jpg) no-repeat -11px;
+				border-radius: 50%;
+				border: 10px solid rgba(255,255,255,0.5);
+				position: relative;
+			}
+			.big-rotating .rotating-k .rotating{
+				width: 170px;
+				height: 170px;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, 0.6);
+				position: absolute;
+				top:-10px;
+				left:-10px;
+				transform: rotate3d(0,1,0,90deg);
+				transition: all .5s;
+				opacity: 0;
+			}
+			.big-rotating:hover .rotating-k>.rotating{
+				transform: rotate3d(0,1,0,0deg);
+				opacity: 1;
+			}
+			.big-rotating .rotating-k .rotating h3 {
+				color: white;
+				font-size: 22px;
+				margin: 34px 24px;
+				text-align: center;
+				text-transform: uppercase;
+				border-bottom: 1px solid white;
+				padding-bottom: 10px;
+			}
+			.big-rotating .rotating-k .rotating p {
+				color: #bbb;
+				font-size: 12px;
+				font-family: italic;
+				margin: -27px 22px;
+			}
+		</style>
+		<hr />
+		<div class="big-zoom">
+			<div class="big"></div>
+			<div class="small">
+				<h3>Heading here</h3>
+				<p>Description goes here</p>
+			</div>
+		</div>
+		<style type="text/css">
+			.big-zoom{
+				width: 200px;
+				height: 200px;
+				margin: 40px auto;
+				position:relative;
+			}
+			.big-zoom .big{
+				width: 150px;
+				height: 150px;
+				background: url(6.jpg) no-repeat -11px;
+				border-radius: 50%;
+				border: 10px solid rgba(255,255,255,0.5);
+				transform: scale(1);
+				opacity: 1;
+				transition: all .5s;
+			}
+			.big-zoom:hover .big{
+				transform: scale(2);
+				opacity: 0;
+			}
+			.big-zoom:hover .small{
+				transform: scale(1.5);
+				opacity: 1;
+			}
+			.big-zoom .small{
+				width: 170px;
+				height: 170px;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, 0.6);
+				position: absolute;
+				top:0px;
+				left:0px;
+				transform: scale(0.5);
+				transition: all .5s;
+				opacity: 0;
+			}
+			.big-zoom .small h3 {
+				color: white;
+				font-size: 22px;
+				margin: 34px 24px;
+				text-align: center;
+				text-transform: uppercase;
+				border-bottom: 1px solid white;
+				padding-bottom: 10px;
+			}
+			.big-zoom .small p {
+				color: #bbb;
+				font-size: 12px;
+				font-family: italic;
+				margin: -27px 22px;
+			}
+		</style>
+		<hr />
+		<div class="shrinkage-mobile">
+			<div class="shrinkage">
+				<div class="shrinkage-left">
+				</div>
+			</div>
+			<div class="mobile-left">		
+			  <div class="mobile">
+				<h3>Heading here</h3>
+				<p>Description goes here</p>
+			  </div>
+			</div>
+		</div>
+		<style type="text/css">
+			.shrinkage-mobile {
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.shrinkage-mobile .shrinkage {
+				transform: scale(1);
+				transition: all .4s;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.shrinkage-mobile .shrinkage .shrinkage-left{
+				width: 150px;
+				height: 150px;
+				background: url(4.jpg) no-repeat -11px;
+				border: 10px solid rgba(255, 255, 255, 0.5);
+				border-radius: 50%;
+				transition: all .3s ease-in-out .4s;
+				transform: translateX(0);
+				opacity: 1;
+			}
+			.shrinkage-mobile:hover .shrinkage .shrinkage-left{
+				transform: translateX(-180px);
+				opacity: 0;
+			}
+			.shrinkage-mobile:hover .shrinkage {
+				transform:scale(0.5);
+			}
+			
+			
+			
+			
+			.shrinkage-mobile:hover .mobile{
+				transform:translateX(0);
+				opacity: 1;
+			}
+			.shrinkage-mobile:hover >.mobile-left{
+				transform:scale(1);
+			}
+			.shrinkage-mobile .mobile-left{
+				transform: scale(0.5);
+				transition: all .3s ease-in-out .7s;
+				position: absolute;
+				top: -30px;
+				left: 0;
+			}
+			.shrinkage-mobile .mobile{
+				width: 170px;
+				height: 170px;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, 0.6);
+				transform: translateX(260px);
+				transition: all .3s .5s;
+				opacity: 0;
+			}
+			.shrinkage-mobile .mobile h3 {
+				color: white;
+				font-size: 22px;
+				margin: 34px 24px;
+				text-align: center;
+				text-transform: uppercase;
+				border-bottom: 1px solid white;
+				padding-top: 35px;
+			}
+			.shrinkage-mobile .mobile p {
+				color: #bbb;
+				font-size: 12px;
+				font-family: italic;
+				margin: -27px 22px;
+			}
+		</style>
+		<hr />
+		<div class="big-rolling">
+			<div class="rolling"></div>
+			<div class="rolling-wz">
+				<h3>Heading here</h3>
+				<p>Description goes here</p>
+			</div>
+		</div>
+		<style type="text/css">
+			.big-rolling{
+				width: 150px;
+				height: 150px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.rolling{
+				width: 150px;
+				height: 150px;
+				background: url(4.jpg) no-repeat -11px;
+				border-radius: 50%;
+				border: 10px solid rgba(255,255,255,0.5);
+				transform:translateX(0) rotate(0);
+				transition: all .5s;
+				opacity: 1;
+			}
+			.big-rolling:hover .rolling{
+				transform:translateX(270px) rotate(180deg);
+				opacity: 0;
+			}
+			
+			.big-rolling:hover .rolling-wz{
+				transform: scale(1);
+				opacity: 1;
+			}
+			.big-rolling .rolling-wz{
+				width: 170px;
+				height: 170px;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, 0.6);
+				transition: all .3s .2s;
+				transform: scale(0);
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+			}
+			.big-rolling .rolling-wz h3 {
+				color: white;
+				font-size: 22px;
+				margin: 34px 24px;
+				text-align: center;
+				text-transform: uppercase;
+				border-bottom: 1px solid white;
+				padding-top: 5px;
+			}
+			.big-rolling .rolling-wz p {
+				color: #bbb;
+				font-size: 12px;
+				font-family: italic;
+				margin: -27px 22px;
+			}
+		</style>
+		<hr />
+		<div class="big-flip">
+			<div class="double"></div>
+			<div class="cover"></div>
+		</div>
+		<style type="text/css">
+			.big-flip{
+				width: 150px;
+				height: 150px;
+				margin: 0 auto;
+				perspective: 100px;
+				position: relative;
+			}
+			.big-flip .double{
+				width: 100px;
+				height: 100px;
+				background: url(4.jpg) no-repeat -11px;
+				border-radius: 50%;
+				border: 10px solid rgba(255,255,255,0.5);
+				transform-origin:100% 0 0;
+				transform: rotateY(0deg);
+				opacity: 1;
+				transition: all .5s;
+			}
+			.big-flip:hover .double{
+				transform-origin:100% 0 0;
+				transform: rotateY(-114deg);
+				opacity: 1;
+			}
+			
+			
+			
+			.big-flip:hover .cover{
+				transform-origin:0 100% 0;
+				transform: rotateY(0deg);
+				opacity: 1;
+			}
+			.big-flip .cover{
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, 0.6);
+				transition: all .3s .4s;
+				transform-origin:0 100% 0;
+				transform: rotateY(127deg);
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+			}
+		</style>
+	</body>
+
+</html>
