@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>动画</title>
+	</head>
+
+	<body>
+		<div class="tiao"></div>
+		<hr />
+			<div class="box">22</div>
+
+	</body>
+
+	<style type="text/css">
+		.tiao{
+			width: 200px;
+			height: 300px;
+			background: url(../7-25/img/004031q6mrp666ax4wrofx.png) no-repeat;
+			animation: jump 1s steps(7,start) infinite;
+		}
+		@keyframes jump{
+			from{
+				background-position-x:180px;
+			}
+			to{
+				background-position-x: -1080px;
+			}
+		}
+	</style>
+		<style type="text/css">	
+			.box {
+				width: 76.5px;
+				height: 81px;
+				background:url(../7-25/img/004032f872jpea2zyp7j6l.jpg);
+				animation-name: qh;
+				animation-duration: 3s;
+				animation-timing-function: steps(26,start);
+				animation-iteration-count: infinite;
+			}
+			@keyframes qh {
+				0% {background-position-x: 0;}
+				100% {background-position-x: 100%;}
+			}
+	</style>
+	<script src="https://cdn.bootcss.com/prefixfree/1.0.7/prefixfree.min.js" ></script>
+
+</html>
