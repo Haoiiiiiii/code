@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/asset/css/bootstrap.min.css">
+    <script src="../js/jquery.js"></script>
+</head>
+<body>
+    <div class="container" style="background:lightblue;">
+        <div class="row">
+            <div class="col-xs-3 box1"></div>
+            <div class="col-xs-3 box2"></div>
+            <div class="col-xs-3 box3"></div>
+            <div class="col-xs-3 box4"></div>
+        </div>
+        <button class="btn btn-danger center-block" onclick="outdata()">点击出现图片</button>
+    </div>
+    <div class="demo"></div>
+    <img src="" alt="" style="width:200px;">
+</body>
+<script>
+    var pageen = 1;
+    function outdata() {
+        $.get("https://www.apiopen.top/meituApi", {
+            'page' : pageen,
+            },
+        function (dataa, textStatus, jqXHR) {
+            $.each(dataa.data, function (indexInArray, item) { 
+                 if (indexInArray % 4 === 0) {
+                     $('.box1').append('<img src="' + item.url + '" class="img-thumbnail">');
+                 }else if(indexInArray % 4 === 1){
+                     $('.box2').append('<img src="' + item.url + '" class="img-thumbnail">');
+                 }else if(indexInArray % 4 === 2){
+                     $('.box3').append('<img src="' + item.url + '" class="img-thumbnail">');
+                 }else if(indexInArray % 4 === 3){
+                     $('.box4').append('<img src="' + item.url + '" class="img-thumbnail">');
+                 }
+            });
+        },
+    );
+    pageen++;
+    }
+</script>
+</html>
