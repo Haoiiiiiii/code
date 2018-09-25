@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>practice</title>
+	</head>
+
+	<body>
+		<div class="boss">
+			<div class="big-box">
+				<div class="box box-beform"></div>
+				<div class="box box-after"></div>
+				<div class="box box-top"></div>
+				<div class="box box-bottom"></div>
+				<div class="box box-left"></div>
+				<div class="box box-right"></div>
+			</div>
+		</div>
+		<div class="boss2">
+			<div class="big-box">
+				<div class="box2 box-beform"></div>
+				<div class="box2 box-after"></div>
+				<div class="box2 box-top"></div>
+				<div class="box2 box-bottom"></div>
+				<div class="box2 box-left"></div>
+				<div class="box2 box-right"></div>
+			</div>
+		</div>
+		<style type="text/css">
+
+			.boss{
+				width: 150px;
+				height: 150px;
+				margin: 200px 150px;
+				perspective: 400px;
+			}
+			.big-box{
+				width: 100px;
+				height: 100px;
+				margin: 0 auto;
+				position: relative;
+				transform-style: preserve-3d;
+				transform-origin:50% 50%;
+				animation:rotating 4s linear infinite;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.box-beform{
+				background:#41C3AC;
+				transform: translateZ(100px);
+			}
+			.box-after{
+				background:#FF884D;
+				transform: rotateY(180deg) translateZ(100px);
+			}
+			.box-top{
+				background:#32526E;
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			.box-bottom{
+				background:#65A2C5;
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+			.box-left{
+				background:#FFCC5C;
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			.box-right{
+				background:#FF6B57;
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			@keyframes rotating{
+				0%{transform: rotateX(0) rotateY(0);}
+				50%{transform: rotateX(360deg) rotateY(0);}
+				100%{transform: rotateX(360deg) rotateY(360deg);}
+			}
+			.boss2{
+				width: 150px;
+				height: 150px;
+				margin: -365px 600px;
+				perspective: 400px;
+			}
+			.box2{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-radius: 50%;
+			}
+		</style>
+	</body>
+
+</html>
