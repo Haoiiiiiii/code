@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="stage">
+			<div class="box"></div>
+		</div>
+		<style type="text/css">
+			body {
+				margin: 0;
+				background: lightcyan;
+				height: 500px;
+			}
+			
+			.stage {
+				width: 400px;
+				height: 400px;
+				border: 10px solid black;
+				position: relative;
+			}
+			
+			.box {
+				width: 20px;
+				height: 20px;
+				background: red;
+				position: absolute;
+				top: 190px;
+				left: 190px;
+				border-radius: 50%;
+			}
+		</style>
+		<script type="text/javascript">
+			var box = document.querySelector('.box');
+			var boxstyle = box.currentStyle ? box.currentStyle : window.getComputedStyle(box, null);
+			var speed = 10;
+			var direction = 'right';
+
+			var positionX = parseInt(boxstyle.left);
+			var positionY = parseInt(boxstyle.top);
+
+			var boxright = function() {
+				positionX += speed;
+				box.style.left = positionX + 'px';
+			}
+
+			var boxleft = function() {
+				positionX -= speed;
+				box.style.left = positionX + 'px';
+			}
+
+			var boxtop = function() {
+				positionY -= speed;
+				box.style.top = positionY + 'px';
+			}
+
+			var boxbottom = function() {
+				positionY += speed;
+				box.style.top = positionY + 'px';
+			}
+
+
+			var checkCollision = function() {
+				if(positionX > 400 - 20) {
+					positionX = 0;
+				}
+				if(positionX < 0) {
+					positionX = 400-20;
+				}
+				if(positionY > 400 - 20) {
+					positionY = 0;
+					
+				}
+				if(positionY < 0) {
+					positionY = 400-20;
+				}
+//				console.log(positionY);
+//				console.log(positionX);
+			}
+
+
+			setInterval(function() {
+				checkCollision();
+				if(direction === 'right') {
+					boxright();
+				} else if(direction === 'left') {
+					boxleft();
+				} else if(direction === 'top') {
+					boxtop();
+				} else if(direction === 'bottom') {
+					boxbottom();
+				}
+			}, 100)
+
+
+			document.body.onkeydown = function(ev) {
+				switch(ev.keyCode) {
+					case 37:
+						direction = 'left'
+						break;
+					case 38:
+						direction = 'top'
+						break;
+					case 39:
+						direction = 'right'
+						break;
+					case 40:
+						direction = 'bottom'
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

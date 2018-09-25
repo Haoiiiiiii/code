@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="big-box">
+			<div class="tabtop">
+				<li class="active box" >div1</li>
+				<li class="box">div2</li>
+				<li class="box">div3</li>
+				<li class="box">div4</li>
+			</div>
+			<div class="tabbottom">
+				<li class="active">oooooo1</li>
+				<li>oooooo2</li>
+				<li>oooooo3</li>
+				<li>oooooo4</li>
+			</div>
+		</div>
+		<style type="text/css">
+
+			body{
+				margin: 0;
+				background: lightblue;
+			}
+			li{
+				list-style: none;
+			}
+			.big-box {
+				width: 400px;
+				margin: 0 auto;
+				text-align: center;
+				color: white;
+			}
+			.big-box .tabtop li.active{
+				background: lightgreen;
+			}
+			.big-box .tabtop li {
+				float: left;
+				width: 100px;
+				line-height: 30px;
+				background: orange;
+				color: white;
+			}
+			.big-box .tabbottom li{
+				width: 100%;
+				background: lightgreen;
+				line-height: 100px;
+				display: none;
+			}
+			.big-box .tabbottom li.active{
+				background: lightgreen;
+				display: block;
+			}
+		</style>
+		<script type="text/javascript">
+			var tabtop=document.querySelectorAll('.big-box .tabtop li');
+			var tabbottom=document.querySelectorAll('.big-box .tabbottom li');
+			
+			// 查找某个元素的兄弟元素的函数
+			var query=function(element){
+				var nodes=[];
+				var allNodes=element.parentNode.children;/*元素 父元素 子元素*/
+				for (var i = 0; i < allNodes.length; i++) {
+					if (allNodes[i]!== element) {
+						nodes.push(allNodes[i]);
+					}
+				}
+				return nodes;
+			};
+			
+			// 某个元素增加某个class的函数
+			var addclass=function(element, className){
+				var oldclass=element.className;
+				var classArray=oldclass.split(' ');
+				//只有没active才可赋值增加
+				if (classArray.indexOf(className) === -1) {
+					classArray.push(className);
+				}
+				element.className = classArray.join(' ').trim();
+			};
+			
+			// 某个元素删除某个class的函数
+			var deleteclass=function(element, className){
+				var oldclass = element.className;
+				var classArray = oldclass.split(' ');
+				//只有有active 才可删除active
+				if (classArray.indexOf(className) === -1) {
+					return;
+				}
+				else{
+					classArray.splice(classArray.indexOf(className),1);
+				}
+				//如果数组长度0，删除元素class，否则将当前值 赋值
+				if (classArray.length === 0) {
+					element.removeAttribute('class');
+				}else{
+					element.className=classArray.join(' ').trim();
+				}
+			};
+			
+
+			for (var i = 0; i < tabtop.length; i++) {
+				tabtop[i].index= i;
+				tabtop[i].onclick=function(){
+					addclass(this,'active'); 
+					//取消tabtop其余高亮
+					var othertabtop=query(this);
+					for (var k = 0; k < othertabtop.length; k++) {
+						deleteclass(othertabtop[k],'active');
+					}
+					//激活自身高亮
+					addclass(tabbottom[this.index],'active');
+					
+					//取消tabbottom其余高亮
+					var othertabbottom = query(tabbottom[this.index]);
+					for (var h = 0; h < othertabbottom.length; h++) {
+						deleteclass(othertabbottom[h],'active');
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>
