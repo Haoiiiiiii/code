@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通知</title>
+</head>
+<body>
+    <input id="permissions" type="button" value="请求权限">
+    <input id="notice" type="button" value="接受通知">
+    <script>
+      //浏览器是否支持
+      if (window.Notification) {
+          console.log("支持通知API");
+      }else{
+          alert("不支持通知API");
+      }
+      //请求用户权限
+      document.getElementById('permissions').addEventListener('click',function(ev){
+          window.Notification.requestPermission();
+      })
+      document.getElementById('notice').addEventListener('click',function(ev){
+        Notification.requestPermission(function(permissions){
+            if (permissions === 'granted') {
+                n = new Notification('您有一条新的通知',{
+                    dir: "ltr",
+                    lang: "zh-CN",
+                    tag:"testNotice",
+                    icon:'../img/logo.png',
+                    body:"Welcome to League of Legends!"
+                })
+            }
+        })  
+      })
+    </script>
+</body>
+</html>
