@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="carousel">
+        <div class="carousel-content">
+            <li class="a" style="background-color: yellow;">1</li>
+            <li class="b" style="background-color: red;">2</li>
+            <li class="c" style="background-color: bisque;">3</li>
+            <li class="d" style="background-color: blue;">4</li>
+        </div>
+        <div class="carousel-control">
+            <span class="left">left</span>
+            <span class="right">right</span>
+        </div>
+    </div>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .carousel {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel .carousel-content {
+            width: 1200px;
+            margin-top: 0;
+        }
+
+        .carousel .carousel-content li {
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+
+        .carousel .carousel-control {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 36px;
+        }
+
+        .carousel .carousel-control span {
+            line-height: 36px;
+            background: lightslategray;
+            display: inline-block;
+
+        }
+
+        .carousel .carousel-control span.left {
+            float: left;
+        }
+
+        .carousel .carousel-control span.right {
+            float: right;
+        }
+    </style>
+    <script>
+        
+        $('.right').click(function () {
+            $('.carousel-content').animate({
+                'margin-left': '-300px'
+            }, 1000, function () {
+                $('.carousel-content').css('margin-left', '0').find('li').eq(0).appendTo(
+                    '.carousel-content');
+            })
+        })
+        $('.left').click(function () {
+            var old = $('.carousel-content li');
+            var prevIndex = old.index($('.carousel-content li:eq(0)')) - 1;
+            if (prevIndex < 0) {
+                prevIndex = old.length - 1;
+            }
+            old.eq(prevIndex).insertBefore('.carousel-content li:eq(0)');
+            $('.carousel-content').css({
+                'margin-left': '-300px'
+            }).animate({
+                'margin-left': '0'
+            }, 1000)
+        })
+    </script>
+</body>
+
+</html>
