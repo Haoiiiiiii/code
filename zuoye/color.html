@@ -47,14 +47,9 @@
           }
         </style>
         <script>
-            $("tr").click(function () {
-                $(this).toggleClass("color");
-                if ($(this).hasClass("color")) {
-                    $(this).attr("checked", true);
-                } else {
-                    $(this).attr("checked", false);
-                }
-            });
+                $('input').click(function(){
+                $(this).parent().first().siblings().siblings().toggleClass("color")
+            })
         </script>
     </table>
 </body>
