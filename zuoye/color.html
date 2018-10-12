@@ -43,16 +43,16 @@
         </tr>
         <style>
           .color{
-              background-color: yellow;
+              background-color: yellow
           }
         </style>
         <script>
-            $("tr").nextAll().click(function () {
-                $(this).children().toggleClass("color");
-                if ($(this).children().hasClass("color")) {
-                    $(this).children().children().attr("checked", true);
+            $("tr").click(function () {
+                $(this).toggleClass("color");
+                if ($(this).hasClass("color")) {
+                    $(this).attr("checked", true);
                 } else {
-                    $(this).children().children().attr("checked", false);
+                    $(this).attr("checked", false);
                 }
             });
         </script>
