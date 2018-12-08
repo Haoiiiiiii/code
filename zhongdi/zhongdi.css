@@ -1,3 +1,7 @@
+.all{
+    width: 1519px;
+    overflow: hidden;
+}
 #zz{
     transform: translateX(-1000px);
     transition: all .7s;
@@ -679,11 +683,13 @@
 
 
 #bzb #bwz{
-    width: 610px;
-    margin: -400px 700px;
+    width: 50%;
     transform: translateY(-500px);
     opacity: 0;
     transition:all .6s;
+    position: absolute;
+    top: 16%;
+    right: 7%;
 }
 
 #bzb #bwz.active{
@@ -704,25 +710,31 @@
 }
 #bzb #bzbz{
     margin: 0 auto;
-    width: 1480px;
+    width: 100%;
     height: 100%;
+    margin-top: 250px;
+    position: relative;
 }
 #bzb #btp{
     background-image: url(img/images/img1.jpg);
     background-repeat: no-repeat;
-    width: 500px;
+    width: 48%;
     height: 400px;
-    margin: -150px 200px;
+    position: absolute;
+    top: 80px;
+    left: 5%;
 }
 #bzb h2{
-    margin: 200px;
-    
     font-size: 40px;
     font-weight: bolder;
-    font-family:"微软雅黑";
+    font-family: "微软雅黑";
+    position: absolute;
+    top: -22%;
+    left: 5%;
 }
 #top .top1{
     margin: 0 auto;
+    width: 95%;
 }
 #top .top1 #one h4{
     width: 200px;
@@ -730,25 +742,23 @@
     color: white;
     font-weight:bolder;
     font-size: 20px;
-    margin: 0 40px 10px 30px;
 }
 #top .top1 #one p{
-    width: 200px;
-    /*padding-top:10px;*/
+    padding-top: 10px;
     color: white;
-    margin: 0px 20px 10px 30px;
-    font-size: 14px;			
+    margin: 0 10px;
+    line-height: 26px;
+    font-size: 13px;			
 }
 #top .top1 #one{
-    width: 255px;
+    width: 22%;
     height: 331px;
     background-color:#16A667;
     border:0 solid #16A667;
     border-radius:25px;
     float: left;
-    margin: 0 15px;
+    margin: 0 13px;
     transition:all 1s;
-    /* opacity: 0; */
 }
 
 
@@ -787,11 +797,11 @@
     padding: 20px;
     width:  100px;
     height: 100px;
-    margin: 10px 50px;
+    margin: 10px 30px;
     background-repeat: no-repeat;
 }
 #top #two{
-    width: 1140px;
+    width: 100%;
     height: 333px;
     margin: 0 auto;
     padding-top: 170px;
@@ -821,12 +831,15 @@
 }
 #text{
     position:absolute;
-    top: 15px;
-    right: 30px;
+    top: -65px;
+    right: -170px;
     background: rgba(0, 0, 0, 0.41);
     border:1px solid white;
     font-size: 16px;
-    padding: 7px 0;
+    padding: 8px 10px;
+}
+#ss form{
+    position: relative;
 }
 #ss input{
     background: transparent;
@@ -836,15 +849,15 @@
 #ss input[type=submit]{
     background:url(img/images/search.png) no-repeat;
     float: right;
-    margin-top: -44px;
     border: none;
     background-position: center;
     width: 22px;
     height: 22px;
-    margin-right: 80px;
     cursor: pointer;
     z-index: 1;
-    position: relative;
+    position: absolute;
+    top: -58px;
+    right: -160px;
 }
 #top .top1 #cd a:hover{
     color: yellow;
@@ -870,17 +883,17 @@
 
 #top {
     background-image: url(img/images/banner.jpg);
-    /*width: 1480px;*/
+    width: 100%;
     height: 720px;
     text-align: center;
     -webkit-background-size: cover;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
 }	
 * {
     margin: 0;
 }	
 #cd {
     background: rgba(0, 0, 0, 0.41);
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
