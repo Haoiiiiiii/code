@@ -1,0 +1,311 @@
+{
+    "list": [
+        {
+            "id": 1,
+            "category_name": "牛奶制品",
+            "created_at": "2018-12-12T15:25:16.000Z",
+            "updated_at": "2018-12-12T15:25:16.000Z",
+            "goods": [
+                {
+                    "id": 1,
+                    "category": 1,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶1",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                },
+                {
+                    "id": 2,
+                    "category": 1,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶2",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                },
+                {
+                    "id": 3,
+                    "category": 1,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶3",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                },
+                {
+                    "id": 4,
+                    "category": 1,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶4",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                },
+                {
+                    "id": 5,
+                    "category": 1,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶5",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "category_name": "高原农特",
+            "created_at": "2018-12-12T15:25:50.000Z",
+            "updated_at": "2018-12-12T15:25:50.000Z",
+            "goods": [
+                {
+                    "id": 6,
+                    "category": 2,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶6",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                },
+                {
+                    "id": 7,
+                    "category": 2,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶7",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "category_name": "时尚饮品",
+            "created_at": "2018-12-12T15:26:05.000Z",
+            "updated_at": "2018-12-12T15:26:05.000Z",
+            "goods": [
+                {
+                    "id": 8,
+                    "category": 3,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶8",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                },
+                {
+                    "id": 9,
+                    "category": 3,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶9",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "category_name": "肉类产品",
+            "created_at": "2018-12-12T15:26:16.000Z",
+            "updated_at": "2018-12-12T15:26:16.000Z",
+            "goods": [
+                {
+                    "id": 10,
+                    "category": 4,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶10",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "category_name": "粮油产品",
+            "created_at": "2018-12-12T15:26:51.000Z",
+            "updated_at": "2018-12-12T15:26:51.000Z",
+            "goods": [
+                {
+                    "id": 11,
+                    "category": 5,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶11",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "category_name": "调料产品",
+            "created_at": "2018-12-12T15:27:08.000Z",
+            "updated_at": "2018-12-12T15:27:08.000Z",
+            "goods": [
+                {
+                    "id": 12,
+                    "category": 6,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶12",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "category_name": "精品日杂",
+            "created_at": "2018-12-12T15:27:33.000Z",
+            "updated_at": "2018-12-12T15:27:33.000Z",
+            "goods": [
+                {
+                    "id": 13,
+                    "category": 7,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶13",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                },
+                {
+                    "id": 18,
+                    "category": 7,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶18",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "category_name": "生态果蔬",
+            "created_at": "2018-12-12T15:27:55.000Z",
+            "updated_at": "2018-12-12T15:27:55.000Z",
+            "goods": [
+                {
+                    "id": 14,
+                    "category": 8,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶14",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                },
+                {
+                    "id": 16,
+                    "category": 8,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶16",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "category_name": "其他",
+            "created_at": "2018-12-12T15:28:05.000Z",
+            "updated_at": "2018-12-12T15:28:05.000Z",
+            "goods": [
+                {
+                    "id": 15,
+                    "category": 9,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶15",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                },
+                {
+                    "id": 17,
+                    "category": 9,
+                    "img_url": "http://qiniu.huangyanyang.cn/%E7%88%B1%E6%83%85%20(2).png?e=1855669107&token=yJZVuefudvPOEN-uE4jitDOAV-cOEENk69dbd1Pt:kHoL0lyRk91DRMx4ENRx3kfQF8w=",
+                    "name": "牛生牛牛奶17",
+                    "description": "好吃好吃好吃好吃好吃",
+                    "price": 13,
+                    "origin_price": 18,
+                    "unit": "盒",
+                    "stock": 100,
+                    "created_at": "2018-12-12T15:38:41.000Z",
+                    "updated_at": "2018-12-12T15:38:41.000Z"
+                }
+            ]
+        }
+    ],
+    "pagination": {}
+}

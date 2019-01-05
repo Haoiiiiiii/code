@@ -3,10 +3,11 @@ var bigcontent = document.getElementById('content');
 var bigstart = document.getElementById('start');
 var bigmain = document.getElementById('main');
 var bigscore = document.getElementById('score');
+var bighp = document.getElementById('hp');
 var bigsuspend = document.getElementById('suspend');
 var bigcontinue = document.getElementById('continue');
 var bigsettlement = document.getElementById('settlement');
-
+// 记录分数
 var score = 0;
 // 获取游戏界面宽高度
 var contentclass = bigcontent.currentStyle? bigcontent.currentStyle: window.getComputedStyle(bigcontent, null);
@@ -19,7 +20,7 @@ var enemyPlaneX ={
 	height: 24,
 	imgSrc: './img/enemy-plane-s.png',
 	boomSrc: './img/enemy-plane-s-boom.gif',
-	boomTime: 100,
+	boomTime: 200,
 	hp: 1
 };
 
@@ -29,8 +30,8 @@ var enemyPlaneZ ={
 	imgSrc: './img/enemy-plane-m.png',
 	hitSrc: './img/enemy-plane-m-z.png',
 	boomSrc: './img/enemy-plane-m-boom.gif',
-	boomTime: 100,
-	hp: 5
+	boomTime: 200,
+	hp: 10
 };
 
 var enemyPlaneD ={
@@ -39,15 +40,15 @@ var enemyPlaneD ={
 	imgSrc: './img/enemy-plane-l.png',
 	hitSrc: './img/enemy-plane-l-d.png',
 	boomSrc: './img/enemy-plane-l-boom.gif',
-	boomTime: 100,
-	hp: 15
+	boomTime: 200,
+	hp: 20
 };
 
 var Ownbullet ={
 	width: 6,
 	height: 14,
 	imgSrc: './img/our-bullet.png',
-	speed: 20
+	speed: 40
 }
 
 // 本机
@@ -57,7 +58,7 @@ var Ownaircraft ={
 	imgSrc: './img/our-plane.gif',
 	boomSrc: './img/our-plane-boom.gif',
 	boomTime: 100,
-	hp: 1
+	hp: 3
 }
 
 // 创建飞机的构造函数
@@ -131,6 +132,27 @@ enemyplane.prototype.createNewenemy = function(){
 	
 	this.newenemy.draw();
 }
+// 移动端触屏 飞机移动
+
+// enemyplane.prototype.ontouchstart = function (event) {
+//     //1.手指的位置
+//     var x = event.touches[0].clientX;
+//     var y = event.touches[0].clientY;
+//     //2.判断是否选中飞机
+//     if (x >= Ownaircraft.x && x <= Ownaircraft.x + Ownaircraft.w && y >= Ownaircraft.y && y <= Ownaircraft.y + Ownaircraft.h) {
+//         //选中飞机, 才能移动
+//         mapCanvas.ontouchmove = function (event) {
+//             //飞机的中心在鼠标的位置
+//             Ownaircraft.x = event.touches[0].clientX - Ownaircraft.w / 2;
+//             Ownaircraft.y = event.touches[0].clientY - Ownaircraft.h / 2;
+//             //禁止系统事件行为
+//             event.preventDefault();
+//         }
+//     }
+// }
+// enemyplane.prototype.ontouchend = function () {
+//     enemyplane.ontouchmove = null;
+// }
 
 // 移动飞机
 enemyplane.prototype.moveEnemy = function(){
@@ -151,6 +173,12 @@ enemyplane.prototype.moveEnemy = function(){
 			
 			if (BullterCollision) {
 				score++;
+				// 分数到达指定值  生命值+1
+				if (score == 50 || score == 100 || score == 150) {
+					planeW.hp++;
+					bighp.innerHTML = planeW.hp;
+				}
+
 				bigscore.innerHTML = score;
 				this.enemyplan[i].imgNode.src = this.enemyplan[i].hitsrc?this.enemyplan[i].hitsrc:this.enemyplan[i].boomsrc;
 				this.enemyplan[i].hp--;
@@ -164,10 +192,17 @@ enemyplane.prototype.moveEnemy = function(){
 	var ownplaneCollisionX = Math.abs(this.enemyplan[i].centerX - planeW.centerX) < (this.enemyplan[i].sizeX / 2 + planeW.sizeX / 2);
 	var ownplaneCollisionY = Math.abs(this.enemyplan[i].centerY - planeW.centerY) < (this.enemyplan[i].sizeY / 2 + planeW.sizeY / 2);
 	var planeCollision = ownplaneCollisionX && ownplaneCollisionY;
-	if (planeCollision) {
-		this.enemyplan[i].hp = 0;
-		planeW.hp--;
+	
+	
+	// 飞机死亡无法碰撞本机
+	if (this.enemyplan[i].hp > 0) {
+		if (planeCollision) {
+			this.enemyplan[i].hp = 0;
+			planeW.hp--;
+			bighp.innerHTML = planeW.hp;
+		}
 	}
+
 	//检测飞机是否死亡
 	if (this.enemyplan[i].hp <= 0) {
 		this.enemyplan[i].imgNode.src = this.enemyplan[i].boomsrc;
@@ -234,7 +269,7 @@ var over = function(){
 	planeW.imgNode.src = planeW.boomsrc;
 	clearInterval(stoptime);
 	bigsettlement.style.display = 'block';
-    document.querySelector('p#final-score').innerHTML = score;
+	document.querySelector('p#final-score').innerHTML = score;
 }
 
 // 实例化所有敌机
@@ -244,26 +279,28 @@ var time = 0;
 
 var stoptime;
 var start = function(){
-	
+	score;
 	bigstart.style.display = 'none';
 	bigmain.style.display = 'block';
 	bigsuspend.style.display = 'none';
 	bigsettlement.style.display = 'none';
 	
+	bighp.innerHTML = planeW.hp;
+
     stoptime = setInterval(function(){
 	time ++;
 	if (time%20 === 0) {
 		allenemy.createNewenemy();
 	}
 	    allenemy.moveEnemy();
-	if (time%5 ===0 ) {
+	if (time%4 ===0 ) {
 		creatBullet();
 	}
 	    moveBullet();
 	if (planeW.hp <=0 ) {
 		over();
 	}
-},50)
+},40)
 }
 
 var restart = function (){
@@ -276,7 +313,7 @@ bigcontinue.onclick = function(ev){
 };
 
    bigmain.onclick = function(){
-   	clearTimeout(stoptime);
+	clearTimeout(stoptime);
    	bigsuspend.style.display = 'block';
 };
 
